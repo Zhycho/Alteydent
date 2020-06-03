@@ -1,0 +1,87 @@
+@import '_variables.less';
+
+@font-face {
+    font-family: "FuturaPT";
+    src: url("../fonts/FuturaPTLight.otf") format("opentype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "FuturaPT";
+    src: url("../fonts/FuturaPTMedium.otf") format("opentype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "FuturaPT";
+    src: url("../fonts/FuturaPTDemi.otf") format("opentype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "FuturaPT";
+    src: url("../fonts/FuturaPTBold.otf") format("opentype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "FuturaPT";
+    src: url("../fonts/FuturaPTHeavy.otf") format("opentype");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "FuturaPTBook";
+    src: url("../fonts/FuturaPTBook.otf") format("opentype");
+    font-weight: 500;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1190px;
+    padding: 0 15px;
+}
+
+// Кнопки
+
+.button {
+    background-color: @blue;
+    color: #FFF;
+    padding: 8px 16px;
+    .trans();
+
+    &:hover {
+        background-color: @green;
+    }
+
+    &.button_rounded {
+        border-radius: 50px;
+    }
+
+    &.button_left-icon {
+        display: flex;
+
+        svg {
+            margin-right: 12px;
+        }
+    }
+}
+
+// Социалки
+
+.soc-list {
+    display: flex;
+}
+
+.soc-list__item {
+
+    a {
+        align-items: center;
+        display: flex;
+        height: 32px;
+        justify-content: center;
+        min-width: 32px;
+        .trans();
+        width: 32px;
+    }
+}

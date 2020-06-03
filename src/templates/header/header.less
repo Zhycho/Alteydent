@@ -1,0 +1,142 @@
+@import '../../style/_variables.less';
+
+.header-top {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 0;
+}
+
+.header-logo {
+    align-items: center;
+    display: flex;
+    width: 210px;
+
+    img {
+        display: block;
+        margin-right: 8px;
+    }
+
+    &:hover {
+
+        .header-logo__bottom-line {
+            color: @green;
+        }
+    }
+}
+
+.header-logo__top-line {
+    color: @blue;
+    display: block;
+    font-size: 24.85px;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.header-logo__bottom-line {
+    color: @blue;
+    display: block;
+    font-size: 16.57px;
+    text-transform: uppercase;
+    .trans(.2s);
+}
+
+.header-info-list {
+    display: flex;
+    margin: 0 -12px;
+    max-width: 600px;
+}
+
+.header-info {
+    color: #191919;
+    display: flex;
+    margin: 0 12px;
+    width: calc(33.3333% - 12px);
+}
+
+.header-info__icon {
+    display: flex;
+    margin-right: 4px;
+    margin-top: 2px;
+}
+
+.header-info__wrapper {
+    font-size: 0.875rem;
+}
+
+.header-info__headline {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.header-info__text {
+    display: block;
+}
+
+.header__soc-list {
+
+    .soc-list__item {
+        margin: 5px;
+
+        a {
+            fill: #948d8a;
+
+            &:hover {
+                fill: @green;
+            }
+        }
+    }
+}
+
+.header-bottom {
+    align-items: center;
+    background-color: @gray;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px 0 20px;
+}
+
+.header-nav {
+
+    ul {
+
+        display: flex;
+
+        li {
+
+            a {
+                color: #FFF;
+                display: inline-block;
+                .f-book();
+                padding: 11px 4px;
+                .trans();
+
+                &:hover {
+                    color: @green;
+                }
+
+                &.active {
+                    color: @green;
+                }
+            }
+
+            &:nth-of-type(n + 2)::before {
+                content: "|";
+                color: #FFF;
+                font-weight: 100;
+            }
+        }
+    }
+}
+
+.header-phone {
+    color: #FFF;
+    font-size: 1.125rem;
+    padding: 0 4px;
+    .trans();
+
+    &:hover {
+        color: @green;
+    }
+}
