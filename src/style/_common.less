@@ -67,6 +67,46 @@
     }
 }
 
+// Разное общее
+
+.link-block {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.block {
+    margin-bottom: 32px;
+}
+
+.block-headline-line {
+    background: url(../img/headline-back__service.jpg);
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 28px;
+    position: relative;
+
+    &::after {
+        background-color: rgba(0, 0, 0, 0.7);
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.block-headline-line__title {
+    color: #FFF;
+    font-size: 1.875rem;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+}
+
 // Социалки
 
 .soc-list {
@@ -84,4 +124,40 @@
         .trans();
         width: 32px;
     }
+}
+
+// Меню услуг
+
+.service {
+
+    &.service_block {
+
+    }
+}
+
+.service-list {
+
+}
+
+.service-list__item {
+
+    a {
+        align-items: center;
+        background-color: #2389d5;
+        border-bottom: 1px solid #3995d9;
+        color: #FFF;
+        display: flex;
+        fill: #FFF;
+        font-size: 1.125rem;
+        padding: 8px 16px;
+    }
+}
+
+.service-list__item-icon {
+    align-items: center;
+    display: flex;
+    height: 45px;
+    justify-content: center;
+    margin-right: 20px;
+    width: 45px;
 }
