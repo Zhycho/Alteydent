@@ -48,6 +48,7 @@
     background-color: @blue;
     color: #FFF;
     padding: 8px 16px;
+    text-align: center;
     .trans();
 
     &:hover {
@@ -56,6 +57,10 @@
 
     &.button_rounded {
         border-radius: 50px;
+    }
+
+    &.button_block {
+        display: block;
     }
 
     &.button_left-icon {
@@ -82,13 +87,13 @@
 }
 
 .block-headline-line {
-    background: url(../img/headline-back__service.jpg);
+    align-items: center;
     display: flex;
     justify-content: space-between;
     padding: 12px 28px;
     position: relative;
 
-    &::after {
+    &::before {
         background-color: rgba(0, 0, 0, 0.7);
         content: "";
         height: 100%;
@@ -97,6 +102,22 @@
         top: 0;
         width: 100%;
     }
+
+    &.block-headline-line_01 {
+        background: url(../img/headline-back__01.jpg);
+    }
+
+    &.block-headline-line_02 {
+        background: url(../img/headline-back__02.jpg);
+    }
+
+    &.block-headline-line_03 {
+        background: url(../img/headline-back__03.jpg);
+    }
+
+    &.block-headline-line_contacts {
+        padding-right: 0;
+    }
 }
 
 .block-headline-line__title {
@@ -104,7 +125,31 @@
     font-size: 1.875rem;
     font-weight: 400;
     position: relative;
+}
+
+.block-headline-line__link {
+    align-items: center;
+    color: @green;
+    display: flex;
+    fill: #FFF;
+    font-size: 1rem;
+    position: relative;
+    text-decoration: underline;
+    .trans();
     z-index: 1;
+
+    svg {
+        margin-left: 12px;
+        .trans();
+    }
+
+    &:hover {
+        text-decoration: none;
+
+        svg {
+            transform: translateX(10px);
+        }
+    }
 }
 
 // Социалки
@@ -129,6 +174,7 @@
 // Меню услуг
 
 .service {
+    display: flex;
 
     &.service_block {
 
@@ -136,7 +182,7 @@
 }
 
 .service-list {
-
+    width: 50%;
 }
 
 .service-list__item {
@@ -151,6 +197,21 @@
         font-size: 1.125rem;
         padding: 8px 16px;
     }
+
+    &.active {
+
+        a {
+            background-color: @blue;
+            border-color: @blue; 
+        }
+    }
+
+    &:last-of-type {
+
+        a {
+            border-bottom: none;
+        }
+    }
 }
 
 .service-list__item-icon {
@@ -160,4 +221,248 @@
     justify-content: center;
     margin-right: 20px;
     width: 45px;
+}
+
+.service-display {
+    background-color: @blue;
+    padding: 12px 28px;
+    width: 50%;
+}
+
+.service-sublist {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+
+    li {
+
+        a {
+            color: #FFF;
+            font-size: 0.875rem;
+            color: #FFF;
+            display: inline-block;
+            font-size: 0.875rem;
+            padding: 6px 0 6px 32px;
+            position: relative;
+            .trans();
+
+            &::before {
+                background-color: #FFF;
+                content: "";
+                display: block;
+                height: 2px;
+                left: 0;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 19px;
+            }
+
+            &:hover {
+                color: @green;
+            }
+        }
+    }
+}
+
+// слайдер
+
+.slider {
+    position: relative;
+}
+
+.slider__prev {
+    align-items: center;
+    background: none;
+    border: none;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    .trans();
+    width: 32px;
+    z-index: 1;
+}
+
+.slider__next {
+    align-items: center;
+    background: none;
+    border: none;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    .trans();
+    width: 32px;
+    z-index: 1;
+}
+
+.slider__gray-btn {
+    fill: #929292;
+
+    &:hover {
+        fill: @blue;
+    }
+}
+
+// карточка доктора
+
+.doctor {
+    
+}
+
+.doctor__wrapper {
+    margin: 0 auto;
+    max-width: 180px;
+}
+
+.doctor__img {
+    align-items: flex-end;
+    display: flex;
+    height: 245px;
+    overflow: hidden;
+
+    img {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+}
+
+.doctor__button {
+    margin-bottom: 16px;
+}
+
+.doctor__name {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.doctor__description {
+    font-size: 1rem;
+    line-height: 24px;
+}
+
+
+// Блок новостей
+
+.articles-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1px -2px;
+
+    .article-card {
+        margin: 0 1px 2px;
+        width: calc(25% - 2px);
+    }
+}
+
+.article-card {
+    background-color: #f2f4f7;
+    padding: 16px 20px 40px;
+    position: relative;
+    .trans();
+
+    &:hover {
+        background-color: @blue;
+
+        .acrticle-card__tags {
+
+            li {
+                color: #FFF;
+            }
+        }
+
+        .article-card__headline, .article-card__description, .article-card__more {
+            color: #FFF;
+        }
+    }
+}
+
+.acrticle-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -4px;
+
+    li {
+        color: @blue;
+        font-size: 0.75rem;
+        margin: 0 4px 4px;
+        .trans();
+    }
+}
+
+.article-card__headline {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    .trans();
+}
+
+.article-card__description {
+    font-size: 0.75rem;
+    .trans();
+}
+
+.article-card__more {
+    bottom: 12px;
+    color: @blue;
+    font-size: 0.75rem;
+    position: absolute;
+    right: 12px;
+    text-decoration: underline;
+    .trans();
+}
+
+// Блок контактов
+
+.contacts-headline-soc {
+    display: flex;
+    position: relative;
+}
+
+.contacts-headline-soc__item {
+
+    a {
+        align-items: center;
+        color: #FFF;
+        display: flex;
+        font-size: 1.0625rem;
+        flex-direction: column;
+        .trans();
+        width: 175px;
+
+        &:hover {
+            color: @green;
+
+            .contacts-headline-soc__item-icon {
+                fill: @green;
+            }
+        }
+    }
+
+    &:nth-of-type(n + 2) {
+
+        a {
+            border-left: 1px solid #9a9a9a;
+        }
+    }
+}
+
+.contacts-headline-soc__item-icon {
+    align-items: center;
+    display: flex;
+    fill: #FFF;
+    height: 24px;
+    justify-content: center;
+    .trans();
+    width: 24px;
 }

@@ -24,7 +24,7 @@ const path = {
     },
     src: {
         html: 'src/*.pug',
-        js: 'src/js/common.js',
+        js: 'src/js/*.js',
         style: 'src/style/main.less',
         styleAll: 'src/**/*.less',
         styleBootstrap: ['src/bootstrap/scss/bootstrap.scss', 'src/bootstrap/scss/bootstrap-grid.scss'],
@@ -34,7 +34,7 @@ const path = {
     watch: {
         html: 'src/*.pug',
         htmlAll: 'src/**/*.pug',
-        js: 'src/js/common.js',
+        js: 'src/js/*.js',
         style: 'src/style/**/*.less',
         styleAll: 'src/**/*.less',
         bootstrap: 'src/bootstrap/**/*.*',
