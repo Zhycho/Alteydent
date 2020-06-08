@@ -1,5 +1,12 @@
 @import '../../style/_variables.less';
 
+header {
+    background-color: #FFF;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
 .header-top {
     align-items: center;
     display: flex;
@@ -52,6 +59,11 @@
     display: flex;
     margin: 0 12px;
     width: calc(33.3333% - 12px);
+
+    @media(max-width: 1200px) {
+        margin: 0 8px;
+        width: calc(33.3333% - 8px);
+    }
 }
 
 .header-info__icon {
@@ -95,17 +107,18 @@
     display: flex;
     justify-content: space-between;
     padding: 0 12px 0 20px;
+    position: relative;
 }
 
 .header-nav {
 
-    ul {
+    & > ul {
 
         display: flex;
 
-        li {
+        & > li {
 
-            a {
+            & > a {
                 color: #FFF;
                 display: inline-block;
                 .f-book();
@@ -126,6 +139,46 @@
                 color: #FFF;
                 font-weight: 100;
             }
+
+            &:hover {
+
+                .service.service_header {
+                    display: flex;
+                }
+
+                .header-subnav {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+.header-subnav {
+    background-color: #f2f4f7;
+    box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.07);
+    columns: 3;
+    column-gap: 12px;
+    display: none;
+    left: 0;
+    padding: 36px 24px;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 1;
+
+    li {
+        margin-bottom: 24px;
+
+        a {
+            padding: 4px 0;
+            text-decoration: underline;
+            .trans();
+
+            &:hover {
+                color: @blue;
+                text-decoration: none;
+            }
         }
     }
 }
@@ -138,5 +191,24 @@
 
     &:hover {
         color: @green;
+    }
+}
+
+.button.header__sign-up {
+
+    @media(max-width: 1200px) {
+        align-items: center;
+        height: 40px;
+        justify-content: center;
+        padding: 0;
+        width: 40px;
+
+        span {
+            display: none;
+        }
+
+        svg {
+            margin: 0;
+        }
     }
 }

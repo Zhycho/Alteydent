@@ -58,12 +58,30 @@ gulp.task('js:build', function () {
         .pipe(reload({stream: true}));
 });
 
+// gulp.task('style:build', function() {
+//     return gulp.src(path.src.styleAll)
+//         .pipe(less())
+//         .pipe(concat('mainstyle.css'))
+//         // .pipe(prefixer())
+//         // .pipe(cssmin())
+//         .pipe(gulp.dest(path.build.css))
+//         .pipe(reload({stream: true}));
+// });
+
 gulp.task('style:build', function() {
-    return gulp.src(path.src.styleAll)
+    return gulp.src([path.src.styleAll, "!src/style/_common.less", "!src/style/_default.less", "!src/style/_variables.less", "!src/style/slick.less", "!src/templates/header/header.less", "!src/templates/footer/footer.less"])
         .pipe(less())
-        .pipe(concat('mainstyle.css'))
+        // .pipe(concat('mainstyle.css'))
         // .pipe(prefixer())
         // .pipe(cssmin())
+        .pipe(gulp.dest(path.build.css))
+        .pipe(reload({stream: true}));
+});
+
+gulp.task('mainstyle:build', function() {
+    return gulp.src(["src/style/_common.less", "src/style/_default.less", "src/style/_variables.less", "src/style/slick.less", "src/templates/header/header.less", "src/templates/footer/footer.less"])
+        .pipe(less())
+        .pipe(concat('mainstyle.css'))
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 });
@@ -103,11 +121,12 @@ gulp.task('fonts:build', function() {
 
 // gulp.task('bootstrap:build', gulp.parallel('bootstrap-css:build'));
 
-gulp.task('build', gulp.parallel('html:build', 'js:build', 'style:build', 'fonts:build', 'image:build'));
+gulp.task('build', gulp.parallel('html:build', 'js:build', 'mainstyle:build', 'style:build', 'fonts:build', 'image:build'));
 
 gulp.task('watch', function() {
     gulp.watch([path.watch.htmlAll], gulp.parallel('html:build'));
     gulp.watch([path.watch.styleAll], gulp.parallel('style:build'));
+    gulp.watch([path.watch.styleAll], gulp.parallel('mainstyle:build'));
     // gulp.watch([path.watch.bootstrap], gulp.parallel('bootstrap:build'));
     gulp.watch([path.watch.js], gulp.parallel('js:build'));
     gulp.watch([path.watch.img], gulp.parallel('image:build'));
