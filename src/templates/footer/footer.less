@@ -12,6 +12,10 @@
     justify-content: space-between;
     padding: 24px 12px 40px;
     width: 115px;
+
+    @media(max-width: 992px) {
+        display: none;
+    }
 }
 
 .footer__logo {
@@ -56,6 +60,10 @@
 
 .footer__main {
     width: calc(100% - 115px);
+
+    @media(max-width: 992px) {
+        width: 100%;
+    }
 }
 
 .footer__description {
@@ -81,6 +89,10 @@
             color: @blue;
         }
     }
+
+    @media(max-width: 992px) {
+        display: none;
+    }
 }
 
 .footer__under {
@@ -99,5 +111,47 @@
         &:hover {
             color: @blue;
         }
+    }
+
+    @media(max-width: 992px) {
+        display: none;
+    }
+}
+
+
+.footer__decription-under-tablet {
+    background-color: #4b4a4b;
+    color: #FFF;
+    font-size: 0.75rem;
+    display: none;
+    padding: 20px 32px;
+    text-align: center;
+
+    @media(max-width: 992px) {
+        display: block;
+    }
+
+    p {
+        margin-bottom: 16px;
+    }
+
+    a {
+        color: #FFF;
+        text-decoration: underline;
+        .trans();
+
+        &:hover {
+            color: @blue;
+        }
+    }
+}
+
+.footer__logo-tablet {
+    display: inline-block;
+    fill: #FFF;
+    .trans();
+
+    &:hover {
+        fill: @blue;
     }
 }

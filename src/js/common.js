@@ -8,6 +8,11 @@ $(document).ready(function() {
         $(this).closest('.service').find('.service-sublist').removeClass('active');
         $(this).closest('.service').find('.service-sublist').eq($(this).index()).addClass('active');
     });
+    // Меню услуг для мобилки
+    $('.service-mobile-list__item-arrow').click( function() {
+        $(this).closest('.service-mobile-list__item').siblings().removeClass('active');
+        $(this).closest('.service-mobile-list__item').toggleClass('active');
+    });
 
     // Разворачивание карты в блоке контактов
     $('.js--contacts-info__item_map').click( function() {
@@ -37,5 +42,77 @@ $(document).ready(function() {
         slidesToScroll: 1,
         prevArrow: $('.js--about-doctors-slider__prev'),
         nextArrow: $('.js--about-doctors-slider__next'),
+        responsive: [
+            {
+                breakpoint: 993,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+        ]
+    });
+
+    // MMenu
+    let $menu = $("#mobile-burger-menu").mmenu({
+        "navbars": [
+            {
+                "position": "top",
+                "content": [
+                    `
+                    <a class="mobile-menu__close js--mobile-menu__header-close" href="javascript:;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path><path d="M0 0h24v24H0z" fill="none"></path></svg>
+                    </a>
+                    <a class="mobile-menu__logo" href="index.html">
+                        <img src="/assets/img/logo-altey_small.png" alt="Логотип стоматологии Алтейдент в виде зуба, объятого лепестками">
+                    </a>
+                    `
+                ]
+            }
+        ],
+        "extensions": [
+            "position-front",
+            "position-top",
+            "fullscreen",
+            "border-full"
+        ],
+        "navbar": {
+            title: "Меню"
+        }
+    });
+
+
+    let $icon = $(".js--burger-button");
+    let API = $menu.data("mmenu");
+    $(document).on('click','.js--mobile-menu__header-close',function(){
+        API.close();
+    });
+
+    $icon.on("click", function () {
+        API.open();
+    });
+
+
+    API.bind("opened", function () {
+        setTimeout(function () {
+            $icon.addClass("is-active");
+        }, 10);
+        $icon.on("click", function () {
+            API.close();
+        });
+    });
+
+    API.bind("closed", function () {
+        setTimeout(function () {
+            $icon.removeClass("is-active");
+        }, 10);
+        $icon.on("click", function () {
+            API.open();
+        });
     });
 });

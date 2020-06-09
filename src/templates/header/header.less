@@ -7,6 +7,12 @@ header {
     z-index: 10;
 }
 
+.header {
+    @media(max-width: 992px) {
+        display: none;
+    }
+}
+
 .header-top {
     align-items: center;
     display: flex;
@@ -209,6 +215,121 @@ header {
 
         svg {
             margin: 0;
+        }
+    }
+}
+
+
+// Планшет
+
+.header-tablet {
+    background-color: @blue;
+    display: none;
+    padding: 20px 0;
+
+    @media(max-width: 992px) {
+        display: flex;
+    }
+
+    @media(max-width: 768px) {
+        padding: 12px 0;
+    }
+
+    @media(max-width: 576px) {
+        display: none;
+    }
+}
+
+.header-tablet-item {
+    align-items: center;
+    display: flex;
+    fill: #FFF;
+    height: 80px;
+    justify-content: center;
+    padding: 0 20px;
+    .trans();
+    width: 85px;
+
+    &:nth-of-type(n + 2) {
+        border-left: 1px solid #7ac2f3;
+    }
+
+    &:hover {
+        fill: @green;
+    }
+
+    &.header-tablet-item_call {
+        color: #FFF;
+        font-size: 1.625rem;
+        width: auto;
+
+        &:hover {
+            color: @green;
+        }
+    }
+
+    @media(max-width: 768px) {
+        height: 50px;
+        padding: 0 10px;
+        width: 65px;
+
+        &.header-tablet-item_call {
+            font-size: 1.225rem;
+        }
+
+        img {
+            width: 50px;
+        }
+
+        svg {
+            transform: scale(0.9);
+        }
+    } 
+}
+
+
+
+// Мобилка
+
+.header-mobile {
+    background-color: @blue;
+    display: none;
+    justify-content: space-between;
+    padding: 16px 0;
+
+    @media(max-width: 576px) {
+        display: flex;
+    }
+
+    @media(max-width: 480px) {
+        padding: 12px 0;
+    }
+}
+
+.header-mobile-item {
+    align-items: center;
+    display: flex;
+    fill: #FFF;
+    height: 60px;
+    justify-content: center;
+    padding: 0 20px;
+    .trans();
+    width: 100%;
+
+    &:nth-of-type(n + 2) {
+        border-left: 1px solid #7ac2f3;
+    }
+
+    &:hover {
+        fill: @green;
+    }
+
+    @media(max-width: 480px) {
+        height: 50px;
+        padding: 0 12px;
+
+        svg {
+            transform: scale(0.9);
         }
     }
 }
