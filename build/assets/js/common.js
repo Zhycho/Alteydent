@@ -69,6 +69,17 @@ $(document).ready(function() {
         nextArrow: $('.js--doctors-mobile-slider-nav__next'),
     });
 
+    // Слайдер о клинике
+    $('.js--about-clinic-slider').slick({
+        infinite: false,
+        slidesToShow: 1,
+        arrows: true,
+        dots: false,
+        slidesToScroll: 1,
+        prevArrow: $('.js--about-clinic-slider__prev'),
+        nextArrow: $('.js--about-clinic-slider__next'),
+    });
+
     // MMenu
     let $menu = $("#mobile-burger-menu").mmenu({
         "navbars": [

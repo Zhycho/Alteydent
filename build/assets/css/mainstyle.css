@@ -1,3 +1,92 @@
+.about-clinic {
+  display: flex;
+  margin: 0 -15px;
+  padding-top: 32px;
+}
+.about-clinic > div {
+  margin: 0 15px;
+  width: calc(50% - 30px);
+}
+.about-clinic-slider__wrapper {
+  position: relative;
+}
+.about-clinic-slider__prev {
+  align-items: center;
+  background-color: #2299eb;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  fill: #FFF;
+  height: 32px;
+  justify-content: center;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  width: 32px;
+  bottom: 12px;
+  right: 52px;
+}
+.about-clinic-slider__prev svg {
+  transform: scale(0.85);
+}
+.about-clinic-slider__prev:hover {
+  background-color: #b4d746;
+}
+.about-clinic-slider__next {
+  align-items: center;
+  background-color: #2299eb;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  fill: #FFF;
+  height: 32px;
+  justify-content: center;
+  position: absolute;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  width: 32px;
+  bottom: 12px;
+  right: 12px;
+}
+.about-clinic-slider__next svg {
+  transform: scale(0.85);
+}
+.about-clinic-slider__next:hover {
+  background-color: #b4d746;
+}
+.about-clinic-slider__item img {
+  display: block;
+  width: 100%;
+}
+.about-clinic__content {
+  padding-top: 24px;
+}
+.about-clinic__content p {
+  font-family: "FuturaPTBook";
+  font-size: 1rem;
+  line-height: 24px;
+  margin-bottom: 24px;
+}
+.about-clinic__headline {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.about-specialist-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -24px;
+  padding-top: 24px;
+}
+.about-specialist-list li {
+  margin-bottom: 24px;
+  width: 25%;
+}
+
 .main-block {
   background: url(../img/main-pic.png);
   background-repeat: no-repeat;
@@ -1972,6 +2061,35 @@ textarea {
   color: #FFF;
 }
 
+
+.breadcrumb {
+  list-style: none;
+  padding: 16px 0;
+}
+.breadcrumb__item {
+  color: #000;
+  display: inline-block;
+  font-size: 0.75rem;
+}
+.breadcrumb__item a {
+  color: #000;
+  display: inline-block;
+  padding: 4px 0;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+}
+.breadcrumb__item a:hover {
+  color: #2299eb;
+}
+.breadcrumb__item:nth-of-type(n + 2)::before {
+  content: "/ ";
+  font-weight: 400;
+}
+.breadcrumb__item.active {
+  font-weight: 600;
+}
 
 .footer {
   background-color: #3c3b3c;
