@@ -58,6 +58,17 @@ $(document).ready(function() {
         ]
     });
 
+    // Слайдер Врачей на главной - мобилка
+    $('.js--doctors-mobile-slider').slick({
+        infinite: false,
+        slidesToShow: 1,
+        arrows: true,
+        dots: false,
+        slidesToScroll: 1,
+        prevArrow: $('.js--doctors-mobile-slider-nav__prev'),
+        nextArrow: $('.js--doctors-mobile-slider-nav__next'),
+    });
+
     // MMenu
     let $menu = $("#mobile-burger-menu").mmenu({
         "navbars": [
