@@ -96,10 +96,33 @@
 
 // Разное общее
 
+.laptop-hide {
+
+    @media(max-width: 992px) {
+        display: none!important;
+    }
+}
+
 .mobile-hide {
 
     @media(max-width: 576px) {
         display: none!important;
+    }
+}
+
+.laptop-show {
+    display: none;
+
+    @media(max-width: 992px) {
+        display: block;
+    }
+}
+
+.mobile-show {
+    display: none;
+
+    @media(max-width: 576px) {
+        display: block;
     }
 }
 
@@ -221,36 +244,6 @@
         text-decoration: none;
 
         svg {
-            transform: translateX(10px);
-        }
-    }
-
-    
-    @media(max-width: 992px) {
-        display: none;
-    }
-}
-
-.block-headline-line__link-mobile {
-    align-items: center;
-    color: @green;
-    display: flex;
-    fill: #FFF;
-    font-size: 1rem;
-    position: relative;
-    text-decoration: underline;
-    .trans();
-    z-index: 1;
-
-    & > svg {
-        margin-left: 12px;
-        .trans();
-    }
-
-    &:hover {
-        text-decoration: none;
-
-        & > svg {
             transform: translateX(10px);
         }
     }
@@ -600,6 +593,13 @@
 
 .doctor {
     
+    &.doctor_tablet {
+
+        .doctor__wrapper {
+            max-width: 265px;
+            text-align: center;
+        }
+    }
 }
 
 .doctor__wrapper {
@@ -1307,20 +1307,6 @@
 
 .doctor-mobile__bottom {
     display: flex;
-
-    & > div {
-        margin: 0 1px;
-        width: 50%;
-    }
-
-    @media(max-width: 420px) {
-        display: block;
-
-        & > div {
-            margin: 0 0 2px;
-            width: 100%;
-        }
-    }
 }
 
 .licenses-mobile {
@@ -1588,18 +1574,18 @@
         display: inline;
 
         a {
-            color: @blue;
+            color: #FFF;
             font-size: 0.875rem;
             text-decoration: underline;
             .trans();
 
             &:hover {
-                color: @green;
+                color: @blue;
             }
         }
 
         &:nth-of-type(n + 2)::before {
-            color: @blue;
+            color: #FFF;
             content: "| ";
         }
     }
@@ -1617,14 +1603,14 @@
     }
 
     a {
-        color: @blue;
+        color: #FFF;
         font-size: 0.875rem;
         text-decoration: underline;
         text-transform: uppercase;
         .trans();
 
         &:hover {
-            color: @green;
+            color: @blue;
         }
     }
 

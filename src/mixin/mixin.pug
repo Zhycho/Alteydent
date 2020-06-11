@@ -30,3 +30,23 @@ mixin article-card
         p.article-card__description Быстрый подсчет количества символов в тексте онлайн, введите текст в текстовую область и поле сообщит вам сколько букв в тексте или строке... 
         span.article-card__more Подробнее
         a(href="article.html" aria-label="Перейти к статье").link-block
+
+mixin vacancy(title='Вакансия')
+    .vacancy
+        .vacancy__top
+            img(src="assets/img/vacancy-active.png", alt="")
+            img(src="assets/img/vacancy.png", alt="")
+        span.vacancy__button.button.button_rounded.button_block= title
+        .vacancy__description
+            span.vacancy__description-headline Откликнуться на вакансию!
+            p Вы можете отправить своё резюме на наш e-mail: altey@mail.ru
+        a(href="#").link-block
+
+mixin vacancy-not-desk(title='Вакансия')
+    .vacancy.vacancy_not-desk
+        .vacancy__top
+            img(src="assets/img/vacancy-active.png", alt="")
+        span.vacancy__button.button.button_block.button_big= title
+        a(href="#").link-block
+
+

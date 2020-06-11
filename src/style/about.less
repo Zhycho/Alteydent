@@ -9,10 +9,35 @@
         margin: 0 15px;
         width: calc(50% - 30px);
     }
+
+    @media(max-width: 992px) {
+        margin: 0;
+        flex-wrap: wrap;
+        padding-top: 0;
+
+        & > div {
+            margin: 0;
+            width: 100%;
+
+            &:nth-of-type(1) {
+                margin: 0 auto;
+                max-width: 560px;
+                order: 1;
+            }
+
+            &:nth-of-type(2) {
+
+            }
+        }
+    }
 }
 
 .about-clinic-slider__wrapper {
     position: relative;
+
+    @media(max-width: 992px) {
+        margin-bottom: 24px;
+    }
 }
 
 .about-clinic-slider {
@@ -42,6 +67,20 @@
     &:hover {
         background-color: @green;
     }
+
+    @media(max-width: 992px) {
+        background-color: rgba(76, 75, 75, 0.2);
+        border-radius: 0;
+        height: 100%;
+        left: 0;
+        top: 0;
+        width: 50px;
+
+        &:hover {
+            background-color: rgba(76, 75, 75, 0.2);
+            fill: @blue;
+        }
+    }
 }
 
 .about-clinic-slider__next {
@@ -67,6 +106,20 @@
     &:hover {
         background-color: @green;
     }
+
+    @media(max-width: 992px) {
+        background-color: rgba(76, 75, 75, 0.2);
+        border-radius: 0;
+        height: 100%;
+        right: 0;
+        top: 0;
+        width: 50px;
+        
+        &:hover {
+            background-color: rgba(76, 75, 75, 0.2);
+            fill: @blue;
+        }
+    }
 }
 
 .about-clinic-slider__item {
@@ -86,6 +139,14 @@
         line-height: 24px;
         margin-bottom: 24px;
     }
+
+    @media(max-width: 992px) {
+        padding: 24px 28px 0;
+    }
+
+    @media(max-width: 420px) {
+        padding: 24px 16px 0;
+    }
 }
 
 .about-clinic__headline {
@@ -104,5 +165,199 @@
         margin-bottom: 24px;
         width: 25%;
     }
+
+    @media(max-width: 1200px) {
+
+        li {
+            width: 33.333%;
+        }
+    }
 }
 
+.documents-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -4px;
+
+    .document-card {
+        margin: 8px 4px 0;
+        width: calc(25% - 8px);
+    }
+}
+
+.document-card {
+    border: 1px solid #d7d7d7;
+    text-align: center;
+}
+
+.document-card__img {
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.document-card__headline {
+    display: block;
+    font-size: 1rem;
+    margin: 4px 12px 8px;
+    text-align: center;
+}
+
+.document-card__link {
+    display: inline-block;
+    font-size: 0.875rem;
+    margin: 0 12px 16px;
+    text-align: center;
+    text-decoration: underline;
+    .trans();
+
+    &:hover {
+        color: @blue;
+    }
+}
+
+.vacancy-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: -24px;
+    padding-top: 24px;
+
+    li {
+        margin-bottom: 24px;
+        width: 25%;
+    }
+
+    @media(max-width: 1200px) {
+
+        li {
+            width: 33.3333%;
+        }
+    }
+}
+
+.vacancy {
+    margin: 0 auto;
+    max-width: 180px;
+    position: relative;
+
+    &:hover {
+
+        .vacancy__top {
+            
+            img {
+
+                &:nth-of-type(1) {
+                    opacity: 0;
+                }
+
+                &:nth-of-type(2) {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .vacancy__button {
+            background-color: @green;
+            border-color: @green;
+        }
+
+        .vacancy__description {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &.vacancy_not-desk {
+        max-width: 255px;
+
+        &:hover {
+
+            .vacancy__top {
+
+                img {
+
+                    &:nth-of-type(1) {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        @media(max-width: 576px) {
+            max-width: none;
+        }
+    }
+}
+
+.vacancy__top {
+    height: 225px;
+    position: relative;
+
+    img {
+        bottom: 0;
+        display: block;
+        left: 50%;
+        position: absolute;
+        .trans();
+        transform: translateX(-50%);
+
+        &:nth-of-type(2) {
+            opacity: 0;
+        }
+    }
+}
+
+.vacancy__description {
+    background-color: #FFF;
+    border-bottom: 5px solid #2299eb;
+    box-shadow: 0px 2px 6px 2px rgba(0, 0, 0, 0.07);
+    left: 50%;
+    opacity: 0;
+    padding: 16px 20px 20px;
+    position: absolute;
+    text-align: center;
+    top: 20%;
+    .trans();
+    transform: translateX(-50%);
+    visibility: hidden;
+    width: 150%;
+
+    p {
+        font-size: 0.875rem;
+    }
+}
+
+.vacancy__description-headline {
+    display: block;
+}
+
+.about-specialist-slider-tablet {
+    margin: 24px 0;
+}
+
+.document-slider {
+    margin: 24px;
+
+    .document-card {
+        margin: 0 10px;
+    }
+}
+
+.vacancy-slider {
+    margin: 24px;
+
+    & > div {
+        margin: 0 10px;
+    }
+}
+
+.about-specialist-slider-mobile {
+    margin: 24px;
+
+    .doctor-mobile {
+        margin: 0 10px;
+        padding: 0;
+    }
+}

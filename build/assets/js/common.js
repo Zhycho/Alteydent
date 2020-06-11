@@ -80,6 +80,72 @@ $(document).ready(function() {
         nextArrow: $('.js--about-clinic-slider__next'),
     });
 
+    // Слайдер наши специалисты, О нас - планшет
+    $('.js--about-specialist-slider-tablet').slick({
+        infinite: false,
+        slidesToShow: 2,
+        arrows: true,
+        dots: false,
+        slidesToScroll: 1,
+        prevArrow: $('.js--about-specialist-slider-tablet__prev'),
+        nextArrow: $('.js--about-specialist-slider-tablet__next'),
+    });
+
+    // Слайдер наши специалисты, О нас - мобилка
+    $('.js--about-specialist-slider-mobile').slick({
+        infinite: false,
+        slidesToShow: 1,
+        arrows: true,
+        dots: false,
+        slidesToScroll: 1,
+        prevArrow: $('.js--about-specialist-slider-mobile__prev'),
+        nextArrow: $('.js--about-specialist-slider-mobile__next'),
+    });
+
+    // Слайдер документов, О нас - планшет
+    $('.js--document-slider').slick({
+        infinite: false,
+        slidesToShow: 3,
+        arrows: true,
+        dots: false,
+        slidesToScroll: 1,
+        prevArrow: $('.js--document-slider__prev'),
+        nextArrow: $('.js--document-slider__next'),
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 577,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+        ]
+    });
+
+    // Вакансий, О нас - планшет
+    $('.js--vacancy-slider').slick({
+        infinite: false,
+        slidesToShow: 2,
+        arrows: true,
+        dots: false,
+        slidesToScroll: 1,
+        prevArrow: $('.js--vacancy-slider__prev'),
+        nextArrow: $('.js--vacancy-slider__next'),
+        responsive: [
+            {
+                breakpoint: 577,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+        ]
+    });
+
     // MMenu
     let $menu = $("#mobile-burger-menu").mmenu({
         "navbars": [

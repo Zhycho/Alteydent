@@ -13,7 +13,7 @@ html(lang="ru")
                 
                 // О клинике - Десктоп
                 .block
-                    .block-headline-line.block-headline-line_02
+                    .block-headline-line.block-headline-line_01
                         h1.block-headline-line__title О клинике «АЛТЕЙДЕНТ»
                     .about-clinic
                         div
@@ -37,7 +37,7 @@ html(lang="ru")
                 // О клинике - Десктоп конец блока
 
                 // Наши специалисты - Десктоп
-                .block
+                .block.laptop-hide
                     .block-headline-line.block-headline-line_02
                         h2.block-headline-line__title Наши специалисты
                     ul.about-specialist-list
@@ -57,18 +57,239 @@ html(lang="ru")
                             .doctor
                                 .doctor__wrapper
                                     .doctor__img
-                                        img(src="assets/img/doctor-vacancy.png", alt="")
+                                        img(src="assets/img/vacancy.png", alt="")
                                     a(href="#").doctor__button.button.button_rounded.button_block Хочу в команду
                 // Наши специалисты - Десктоп конец блока
+                
+                // Наши специалисты - Планшет
+                .block.laptop-show.mobile-hide
+                    .block-headline-line.block-headline-line_02
+                        h2.block-headline-line__title Наши специалисты
+                    .slider
+                        button.slider__prev.slider__gray-btn.js--about-specialist-slider-tablet__prev(aria-label="Предыдущий слайд")
+                            +arrow-l
+                        button.slider__next.slider__gray-btn.js--about-specialist-slider-tablet__next(aria-label="Следующий слайд")
+                            +arrow-r
+                        .about-specialist-slider-tablet.js--about-specialist-slider-tablet
+                            .doctor.doctor_tablet
+                                .doctor__wrapper
+                                    .doctor__img
+                                        img(src='assets/img/doctor-01.png' alt="")
+                                    a(href="specialist.html").doctor__button.button.button_block.button_big Подробнее
+                                    h3.doctor__name Попов Максим
+                                    span.doctor__description Врач стоматолог-терапевт с 2008г.
+                            .doctor.doctor_tablet
+                                .doctor__wrapper
+                                    .doctor__img
+                                        img(src='assets/img/doctor-02.png' alt="")
+                                    a(href="specialist.html").doctor__button.button.button_block.button_big Подробнее
+                                    h3.doctor__name Попов Максим
+                                    span.doctor__description Врач стоматолог-терапевт с 2008г.
+                            .doctor.doctor_tablet
+                                .doctor__wrapper
+                                    .doctor__img
+                                        img(src='assets/img/doctor-03.png' alt="")
+                                    a(href="specialist.html").doctor__button.button.button_block.button_big Подробнее
+                                    h3.doctor__name Попов Максим
+                                    span.doctor__description Врач стоматолог-терапевт с 2008г.
+                            .doctor.doctor_tablet
+                                .doctor__wrapper
+                                    .doctor__img
+                                        img(src='assets/img/doctor-04.png' alt="")
+                                    a(href="specialist.html").doctor__button.button.button_block.button_big Подробнее
+                                    h3.doctor__name Попов Максим
+                                    span.doctor__description Врач стоматолог-терапевт с 2008г.
+                            .doctor.doctor_tablet
+                                .doctor__wrapper
+                                    .doctor__img
+                                        img(src='assets/img/doctor-05.png' alt="")
+                                    a(href="specialist.html").doctor__button.button.button_block.button_big Подробнее
+                                    h3.doctor__name Попов Максим
+                                    span.doctor__description Врач стоматолог-терапевт с 2008г.
+                            .doctor.doctor_tablet
+                                .doctor__wrapper
+                                    .doctor__img
+                                        img(src='assets/img/doctor-06.png' alt="")
+                                    a(href="specialist.html").doctor__button.button.button_block.button_big Подробнее
+                                    h3.doctor__name Попов Максим
+                                    span.doctor__description Врач стоматолог-терапевт с 2008г.
+                // Наши специалисты - Планшет конец блока
+
+                // Наши специалисты - Мобилка
+                .block.mobile-show
+                    .block-headline-line.block-headline-line_02
+                        h2.block-headline-line__title Наши специалисты
+                    .slider
+                        button.slider__prev.slider__gray-btn.js--about-specialist-slider-mobile__prev(aria-label="Предыдущий слайд")
+                            +arrow-l
+                        button.slider__next.slider__gray-btn.js--about-specialist-slider-mobile__next(aria-label="Следующий слайд")
+                            +arrow-r
+                        .about-specialist-slider-mobile.js--about-specialist-slider-mobile
+                            .doctor-mobile
+                                .doctor-mobile__top
+                                    div
+                                        h3.doctor-mobile__name Попов Максим
+                                        span.doctor-mobile__description Врач стоматолог-терапевт с 2008г.
+                                    div
+                                        .doctor-mobile__avatar
+                                            img(src="assets/img/doctor-01.png", alt="")
+                                .doctor-mobile__bottom
+                                    a(href="specialist.html").button.button_block.button_big Подробнее о враче
+                            .doctor-mobile
+                                .doctor-mobile__top
+                                    div
+                                        h3.doctor-mobile__name Попов Максим
+                                        span.doctor-mobile__description Врач стоматолог-терапевт с 2008г.
+                                    div
+                                        .doctor-mobile__avatar
+                                            img(src="assets/img/doctor-02.png", alt="")
+                                .doctor-mobile__bottom
+                                    a(href="specialist.html").button.button_block.button_big Подробнее о враче
+                            .doctor-mobile
+                                .doctor-mobile__top
+                                    div
+                                        h3.doctor-mobile__name Попов Максим
+                                        span.doctor-mobile__description Врач стоматолог-терапевт с 2008г.
+                                    div
+                                        .doctor-mobile__avatar
+                                            img(src="assets/img/doctor-03.png", alt="")
+                                .doctor-mobile__bottom
+                                    a(href="specialist.html").button.button_block.button_big Подробнее о враче
+                            .doctor-mobile
+                                .doctor-mobile__top
+                                    div
+                                        h3.doctor-mobile__name Попов Максим
+                                        span.doctor-mobile__description Врач стоматолог-терапевт с 2008г.
+                                    div
+                                        .doctor-mobile__avatar
+                                            img(src="assets/img/doctor-04.png", alt="")
+                                .doctor-mobile__bottom
+                                    a(href="specialist.html").button.button_block.button_big Подробнее о враче
+                            .doctor-mobile
+                                .doctor-mobile__top
+                                    div
+                                        h3.doctor-mobile__name Попов Максим
+                                        span.doctor-mobile__description Врач стоматолог-терапевт с 2008г.
+                                    div
+                                        .doctor-mobile__avatar
+                                            img(src="assets/img/doctor-05.png", alt="")
+                                .doctor-mobile__bottom
+                                    a(href="specialist.html").button.button_block.button_big Подробнее о враче
+                            .doctor-mobile
+                                .doctor-mobile__top
+                                    div
+                                        h3.doctor-mobile__name Попов Максим
+                                        span.doctor-mobile__description Врач стоматолог-терапевт с 2008г.
+                                    div
+                                        .doctor-mobile__avatar
+                                            img(src="assets/img/doctor-06.png", alt="")
+                                .doctor-mobile__bottom
+                                    a(href="specialist.html").button.button_block.button_big Подробнее о враче
+                // Наши специалисты - Мобилка конец блока
 
                 // Документы - Десктоп
-                .block
+                .block.laptop-hide
                     .block-headline-line.block-headline-line_02
                         h2.block-headline-line__title Документы
                     .documents-list
-                        
-                    
+                        .document-card
+                            .document-card__img
+                                img(src="assets/img/document-img.png", alt="")
+                            span.document-card__headline Лицензия
+                            a(href="").document-card__link Лицензия NoЛО-59-01-004678  от 03.08.2018
+                        .document-card
+                            .document-card__img
+                                img(src="assets/img/document-img.png", alt="")
+                            span.document-card__headline Лицензия
+                            a(href="").document-card__link Лицензия NoЛО-59-01-004678  от 03.08.2018
+                        .document-card
+                            .document-card__img
+                                img(src="assets/img/document-img.png", alt="")
+                            span.document-card__headline Лицензия
+                            a(href="").document-card__link Лицензия NoЛО-59-01-004678  от 03.08.2018
+                        .document-card
+                            .document-card__img
+                                img(src="assets/img/document-img.png", alt="")
+                            span.document-card__headline Лицензия
+                            a(href="").document-card__link Лицензия NoЛО-59-01-004678  от 03.08.2018
+                        .document-card
+                            .document-card__img
+                                img(src="assets/img/document-img.png", alt="")
+                            span.document-card__headline Лицензия
+                            a(href="").document-card__link Лицензия NoЛО-59-01-004678  от 03.08.2018
+                        .document-card
+                            .document-card__img
+                                img(src="assets/img/document-img.png", alt="")
+                            span.document-card__headline Лицензия
+                            a(href="").document-card__link Лицензия NoЛО-59-01-004678  от 03.08.2018
                 // Документы - Десктоп конец блока
+
+                // Документы - Планшет
+                .block.laptop-show
+                    .block-headline-line.block-headline-line_02
+                        h2.block-headline-line__title Документы
+                    .slider
+                        button.slider__prev.slider__gray-btn.js--document-slider__prev(aria-label="Предыдущий слайд")
+                            +arrow-l
+                        button.slider__next.slider__gray-btn.js--document-slider__next(aria-label="Следующий слайд")
+                            +arrow-r
+                        .document-slider.js--document-slider
+                            .document-card
+                                .document-card__img
+                                    img(src="assets/img/document-img.png", alt="")
+                                span.document-card__headline Лицензия
+                                a(href="").document-card__link Лицензия NoЛО-59-01-004678  от 03.08.2018
+                            .document-card
+                                .document-card__img
+                                    img(src="assets/img/document-img.png", alt="")
+                                span.document-card__headline Лицензия
+                                a(href="").document-card__link Лицензия NoЛО-59-01-004678  от 03.08.2018
+                            .document-card
+                                .document-card__img
+                                    img(src="assets/img/document-img.png", alt="")
+                                span.document-card__headline Лицензия
+                                a(href="").document-card__link Лицензия NoЛО-59-01-004678  от 03.08.2018
+                            .document-card
+                                .document-card__img
+                                    img(src="assets/img/document-img.png", alt="")
+                                span.document-card__headline Лицензия
+                                a(href="").document-card__link Лицензия NoЛО-59-01-004678  от 03.08.2018
+                // Документы - Планшет конец блока
+
+                // Вакансии - Десктоп
+                .block.laptop-hide
+                    .block-headline-line.block-headline-line_02
+                        h2.block-headline-line__title Вакансии
+                    ul.vacancy-list
+                        li
+                            +vacancy('Администратор')
+                        li
+                            +vacancy('Врач ортопед')
+                        li
+                            +vacancy('Врач терапевт')
+                        li
+                            +vacancy('Врач хирург')
+                // Вакансии - Десктоп конец блока
+
+                // Вакансии - Планшет
+                .block.laptop-show
+                    .block-headline-line.block-headline-line_02
+                        h2.block-headline-line__title Вакансии
+                    .slider
+                        button.slider__prev.slider__gray-btn.js--vacancy-slider__prev(aria-label="Предыдущий слайд")
+                            +arrow-l
+                        button.slider__next.slider__gray-btn.js--vacancy-slider__next(aria-label="Следующий слайд")
+                            +arrow-r
+                        .vacancy-slider.js--vacancy-slider
+                            div
+                                +vacancy-not-desk('Администратор')
+                            div
+                                +vacancy-not-desk('Врач ортопед')
+                            div
+                                +vacancy-not-desk('Врач терапевт')
+                            div
+                                +vacancy-not-desk('Врач хирург')
+                // Вакансии - Планшет конец блока
 
                 // Оставить заявку - Десктоп
                 .block
