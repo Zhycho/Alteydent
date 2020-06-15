@@ -92,6 +92,14 @@
             margin-right: 12px;
         }
     }
+
+    &.button_right-icon {
+        display: flex;
+
+        svg {
+            margin-left: 12px;
+        }
+    }
 }
 
 // Разное общее
@@ -302,6 +310,185 @@
     }
 }
 
+.page-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+
+    &.page-title_margin {
+        margin: 32px 0;
+    }
+}
+
+.content-with-side-left {
+    align-items: flex-start;
+    display: flex;
+
+    & > aside {
+        position: sticky;
+        top: 145px;
+        width: 295px;
+    }
+
+    & > div {
+        padding-left: 15px;
+        width: calc(100% - 295px);
+    }
+
+    @media (max-width: 992px) {
+        & > aside {
+            display: none;
+        }
+
+        & > div {
+            padding-left: 0;
+            width: 100%;
+        }
+    }
+}
+
+.aside-links {
+    margin-bottom: 20px;
+}
+
+.aside-links__headline-wrapper {
+    background: url(../img/headline-back__02.jpg);
+    padding: 14px 24px;
+    position: relative;
+
+    &::after {
+        background-color: rgba(0, 0, 0, 0.7);
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.aside-links__headline {
+    color: #FFF;
+    font-size: 1.875rem;
+    font-weight: 400;
+    position: relative;
+    z-index: 1;
+}
+
+.aside-links__list {
+
+    & > ul {
+
+        & > li {
+
+            & > a {
+                display: block;
+                .f-book();
+                font-size: 0.875rem;
+                padding: 5px 15px;
+                .trans();
+            }
+
+            &:nth-of-type(odd) {
+                
+                a {
+                    background-color: #fbfbfc;
+
+                    &:hover {
+                        background-color: @blue;
+                        color: #FFF;
+                    }
+                } 
+            }
+
+            &:nth-of-type(even) {
+                
+                a {
+                    background-color: #e3e5e8;
+
+                    &:hover {
+                        background-color: @blue;
+                        color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.appointment {
+    background-color: @blue;
+    color: #FFF;
+    margin-bottom: 76px;
+    padding: 40px 12px;
+    position: relative;
+    text-align: center;
+
+    &::before {
+        background-color: #b4d746;
+        content: "";
+        display: block;
+        height: 56px;
+        left: 0;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+    }
+
+    &::after {
+        background: url(../img/feedback.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        bottom: -56px;
+        content: "";
+        display: block;
+        height: 160px;
+        left: 15px;
+        position: absolute;
+        width: 130px;
+    }
+}
+
+.appointment__headline {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 20px;
+}
+
+.appointment__description {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 36px;
+}
+
+.appointment__form {
+
+}
+
+.appointment__input {
+    margin-bottom: 12px;
+
+    input {
+        border-color: #FFF;
+    }
+}
+
+.appointment__button {
+    background-color: #FFF;
+    border-color: #FFF;
+    color: @gray;
+    font-size: 1rem;
+    fill: @gray;
+    margin: 36px 0 0 auto;
+
+    &:hover {
+        color: #FFF;
+        fill: #FFF;
+    }
+}
 
 // Социалки
 

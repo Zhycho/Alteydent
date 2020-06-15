@@ -146,6 +146,44 @@ $(document).ready(function() {
         ]
     });
 
+    // Слайдер сертификатов, специалист - мобилка
+    $('.js--specialist-certificates-slider').slick({
+        infinite: false,
+        slidesToShow: 2,
+        arrows: true,
+        dots: false,
+        slidesToScroll: 1,
+        prevArrow: $('.js--specialist-certificates-slider__prev'),
+        nextArrow: $('.js--specialist-certificates-slider__next'),
+        responsive: [
+            {
+                breakpoint: 421,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+        ]
+    });
+
+    // Слайдер сертификатов, специалист - мобилка
+    $('.js--specialist-certificates-slider2').slick({
+        infinite: false,
+        slidesToShow: 2,
+        arrows: true,
+        dots: false,
+        slidesToScroll: 1,
+        prevArrow: $('.js--specialist-certificates-slider2__prev'),
+        nextArrow: $('.js--specialist-certificates-slider2__next'),
+        responsive: [
+            {
+                breakpoint: 421,
+                settings: {
+                    slidesToShow: 1
+                }
+            },
+        ]
+    });
+
     // MMenu
     let $menu = $("#mobile-burger-menu").mmenu({
         "navbars": [
