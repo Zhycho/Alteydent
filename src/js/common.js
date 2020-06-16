@@ -19,6 +19,23 @@ $(document).ready(function() {
         $(this).closest('.contacts-info').toggleClass('active');
     });
 
+    // Табы с ценами
+    $('.js--tab-list__link').click( function() {
+        $(this).closest('.tab-list__item').toggleClass('active');
+    });
+
+    // Якоря
+    $('a[href^=\\#]').click(function(){
+        var el = $(this).attr('href');
+        $('html, body').animate({scrollTop: $(el).offset().top - 180}, 1000);
+        return false;
+    });
+
+    // Фильтра на странице статей
+    $('.js--page-filter').click( function() {
+        $(this).toggleClass('active');
+    });
+
     // Кнопка наверх
     var btn = $('.js--to-top');  
     $(window).scroll(function() {     
@@ -67,6 +84,31 @@ $(document).ready(function() {
         slidesToScroll: 1,
         prevArrow: $('.js--doctors-mobile-slider-nav__prev'),
         nextArrow: $('.js--doctors-mobile-slider-nav__next'),
+    });
+
+    // Слайдер типовой враче
+    $('.js--our-doctors-slider').slick({
+        infinite: false,
+        slidesToShow: 3,
+        arrows: true,
+        dots: false,
+        slidesToScroll: 1,
+        prevArrow: $('.js--our-doctors-slider__prev'),
+        nextArrow: $('.js--our-doctors-slider__next'),
+        responsive: [
+            {
+                breakpoint: 993,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+        ]
     });
 
     // Слайдер о клинике
