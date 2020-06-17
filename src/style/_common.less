@@ -75,13 +75,18 @@
         padding: 16px 24px;
     }
 
+    &.button_small {
+        padding: 4px 16px;
+    }
+
     &.button_green {
         background-color: @green;
         border-color: @green;
 
         &:hover {
-            background-color: @blue;
-            border-color: @blue;
+            background-color: #FFF;
+            border-color: #FFF;
+            color: @gray;
         }
     }
 
@@ -564,6 +569,7 @@
 }
 
 .title-mid {
+    display: block;
     font-size: 1.125rem;
     font-weight: 600;
     margin: 32px auto;
@@ -644,7 +650,7 @@
     }
 
     & > div {
-        padding-left: 15px;
+        padding-left: 20px;
         width: calc(100% - 295px);
     }
 
@@ -671,7 +677,7 @@
     }
 
     & > div {
-        padding-right: 15px;
+        padding-right: 20px;
         width: calc(100% - 295px);
     }
 
@@ -1093,6 +1099,14 @@
     z-index: 1;
 }
 
+.slider__prev.slick-disabled {
+    cursor: auto;
+    fill: #929292;
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
+}
+
 .slider__next {
     align-items: center;
     background: none;
@@ -1107,6 +1121,14 @@
     .trans();
     width: 32px;
     z-index: 1;
+}
+
+.slider__next.slick-disabled {
+    cursor: auto;
+    fill: #929292;
+    opacity: 0.5;
+    pointer-events: none;
+    user-select: none;
 }
 
 .slider__gray-btn {
