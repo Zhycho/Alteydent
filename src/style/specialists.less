@@ -10,10 +10,6 @@
     }
 }
 
-.specialist-bottom-content {
-
-}
-
 .specialist-img {
     margin-right: 20px;
     min-width: 50%;
@@ -102,12 +98,20 @@
         margin: 0 4px 8px;
 
         & > a {
+            display: block;
 
             & > img {
                 display: block;
                 height: 80px;
                 object-fit: contain;
                 width: 60px;
+            }
+
+            border: 1px solid transparent;
+            .trans();
+
+            &:hover {
+                border-color: @blue;
             }
         }
     }
@@ -286,9 +290,18 @@
     margin-top: 20px;
 
     a {
+        border: 1px solid transparent;
+        display: block;
+        margin: 0 auto;
+        .trans();
+        width: fit-content;
 
         img {
             margin: 0 auto;
+        }
+
+        &:hover {
+            border-color: @blue;
         }
     }
 }

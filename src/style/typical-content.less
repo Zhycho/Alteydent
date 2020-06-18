@@ -342,6 +342,11 @@
             &:hover {
                 text-decoration: underline;
             }
+
+            &.active {
+                color: @green;
+                pointer-events: none;
+            }
         }
     }
 
@@ -365,6 +370,25 @@
                     background-color: @gray;
                     color: #FFF;
                     text-decoration: none;
+                }
+
+                &.active {
+                    background-color: @gray;
+                    color: #FFF;
+                    pointer-events: none;
+                }
+            }
+
+            &:nth-of-type(even) {
+
+                a {
+                    background-color: #FFF;
+                    color: @gray;
+
+                    &:hover {
+                        background-color: @gray;
+                        color: #FFF;
+                    }
                 }
             }
 
