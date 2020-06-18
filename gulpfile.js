@@ -63,7 +63,7 @@ gulp.task('style:build', function() {
         .pipe(less())
         .pipe(concat('mainstyle.css'))
         .pipe(prefixer())
-        .pipe(cssmin())
+        // .pipe(cssmin())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({stream: true}));
 });
